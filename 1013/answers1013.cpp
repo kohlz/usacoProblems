@@ -1,4 +1,3 @@
-// code not complete yet
 #include<iostream>
 using namespace std; 
 
@@ -8,7 +7,7 @@ int n;
 int fin[1000];
 int temp;
 
-void exchange(int a){
+int exchange(int a){
     if(a >= change[0][0] && a <= change[0][1]){
         // x - left = right - y
         // y = right - x + left
@@ -21,7 +20,7 @@ void exchange(int a){
         // cout<<a<<" ";
         // cout<<2<<" "<<change[1][0]<<" "<<change[1][1]<<endl;
     }
-    return;
+    return a;
 }
 
 int main(){
@@ -35,8 +34,8 @@ int main(){
     for(int i=1; i<=k; i++){
         temp = i;
         for(int j=0; j<n; j++){
-            exchange(temp);
-        }
+            temp = exchange(temp);
+        }       
         // exchange(temp);
         fin[temp] = i;
     }
@@ -47,5 +46,3 @@ int main(){
 
     return 0;
 }
-// code not complete yet
-// problem will be solved predictly in 2021.10.29
